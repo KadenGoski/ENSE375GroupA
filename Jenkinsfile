@@ -1,7 +1,7 @@
 pipeline {
 
     environment {
-        registry = "rishabhprasad03/ense375group-a"
+        registry = "kadengoski/testrun123"
         registryCredential = 'dockerhub'
         dockerImage = '';
     }
@@ -13,7 +13,7 @@ pipeline {
             steps{
                 cleanWs()
                 checkout scm: [$class: 'GitSCM', branches: [[name: '*/master']],userRemoteConfigs:
-                [[credentialsId: 'github-ssh-key', url: 'git@github.com:rishabhprasad/ENSE375GroupA.git']]]
+                [[credentialsId: 'github-ssh-key', url: 'git@github.com:KadenGoski/ENSE375GroupA.git']]]
             }
         }
 
